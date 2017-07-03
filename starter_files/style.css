@@ -52,6 +52,18 @@ header{
   border-bottom: 2px solid #ddddff;
 }
 
+footer {
+  display: flex;
+  padding: 15px 0;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+  background-color: orange;
+}
+
+footer nav a {
+  margin: 0 10px;
+}
 #site_container{
   padding: 20px;
   max-width: 1100px;
@@ -77,33 +89,110 @@ header{
   background: #ddddff;
 }
 
-@media (max-width: 500px) {
+#main_content {
+  padding: 20px;
+  background-color: #ddffff;
+}
+
+#sidebar_content div {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #ffffdd;
+}
+
+footer {
+  display: flex;
+  padding: 15px 0;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+  background-color: #FFDEA2;
+}
+
+footer nav a {
+  margin: 0 10px;
+}
+
+/*MOBILE STYLES*/
+@media (max-width: 639px) {
+  #logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
   #logo {
     display: flex;
     justify-content: center;
   }
 
-  #main_content {
-    padding: 20px;
-    background-color: #ddffff;
-  }
-
-  #sidebar_content div {
-    margin: 30px 0;
-    padding: 20px;
-    background-color: #ffffdd;
-  }
-
-  footer {
+  #main_nav{
     display: flex;
-    padding: 15px 0;
-    justify-content: center;
-    align-content: space-around;
-    align-items: center;
-    background-color: orange;
+    flex-direction: row;
   }
 
-  footer nav a {
-    margin: 0 10px;
+  #main_nav a{
+    width: 33%;
+    margin: 15px 10px;
+  }
+
+  #sidebar_content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #sidebar_content div{
+    width: 33%;
+    margin: 15px 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #main_nav{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  #main_nav a{
+    width: 100px;
+    margin: 0 5px;
+  }
+
+  #main_content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #main_content div:first-child {
+    width: 70%;
+    margin-right: 30px;
+  }
+
+  #main_content div:last-child {
+    width: 30%;
+  }
+
+  #sidebar_content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #sidebar_content div{
+    width: 33%;
+    margin: 15px 0;
   }
 }
